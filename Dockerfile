@@ -10,6 +10,7 @@ ENV http_proxy ""
 
 #update all
 RUN apt-get update && apt-get -y upgrade \
+  && apt-get install -y ttf-wqy-microhei \
   && apt-get install -y --no-install-recommends apt-utils \
   && apt-get install -y wget gnupg unzip xvfb libxi6 libgconf-2-4
 
