@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Amsterdam
-ENV CHROMEDRIVER_VERSION 75.0.3770.90
+ENV CHROMEDRIVER_VERSION 76.0.3809.87
 ENV http_proxy ""
 
 #ENV CHROME_DRIVER_VERSION='curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE'
