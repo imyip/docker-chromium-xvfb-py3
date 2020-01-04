@@ -2,7 +2,11 @@ FROM debian:stable-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Amsterdam
+<<<<<<< HEAD
 ENV CHROMEDRIVER_VERSION 79.0.3945.36
+=======
+ENV CHROMEDRIVER_VERSION 78.0.3904.11
+>>>>>>> 2dd7f40f07119ff512a7fa1c2abe8acd0a688a75
 ENV http_proxy ""
 
 #ENV CHROME_DRIVER_VERSION='curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE'
@@ -10,6 +14,7 @@ ENV http_proxy ""
 
 #update all
 RUN apt-get update && apt-get -y upgrade \
+  && apt-get install -y ttf-wqy-microhei \
   && apt-get install -y --no-install-recommends apt-utils \
   && apt-get install -y wget gnupg unzip xvfb libxi6 libgconf-2-4
 
